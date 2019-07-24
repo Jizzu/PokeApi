@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    android:orientation="vertical"
+    tools:context=".ui.activity.DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:transitionName="animation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivImage">
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTypeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pokemon_stats_default_value"
+                    android:textColor="@color/grey"
+                    android:textSize="28sp" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertGuideStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertGuideEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <TextView
+                android:id="@+id/tvId"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/id"
+                app:layout_constraintStart_toStartOf="@+id/vertGuideStart"
+                app:layout_constraintTop_toBottomOf="@id/llType" />
+
+            <TextView
+                android:id="@+id/tvIdValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvId"
+                app:layout_constraintStart_toEndOf="@+id/tvId" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/weight"
+                app:layout_constraintStart_toStartOf="@+id/vertGuideStart"
+                app:layout_constraintTop_toBottomOf="@id/tvId" />
+
+            <TextView
+                android:id="@+id/tvWeightValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvWeight"
+                app:layout_constraintStart_toEndOf="@+id/tvWeight"
+                app:layout_constraintTop_toBottomOf="@id/tvIdValue" />
+
+            <TextView
+                android:id="@+id/tvHeight"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/height"
+                app:layout_constraintStart_toStartOf="@+id/vertGuideStart"
+                app:layout_constraintTop_toBottomOf="@id/tvWeight" />
+
+            <TextView
+                android:id="@+id/tvHeightValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvHeight"
+                app:layout_constraintStart_toEndOf="@+id/tvHeight"
+                app:layout_constraintTop_toBottomOf="@id/tvWeightValue" />
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/speed"
+                app:layout_constraintStart_toStartOf="@+id/vertGuideStart"
+                app:layout_constraintTop_toBottomOf="@id/tvHeight" />
+
+            <TextView
+                android:id="@+id/tvSpeedValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvSpeed"
+                app:layout_constraintStart_toEndOf="@+id/tvSpeed"
+                app:layout_constraintTop_toBottomOf="@id/tvHeightValue" />
+
+            <TextView
+                android:id="@+id/tvAbilities"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/abilities"
+                app:layout_constraintStart_toStartOf="@+id/vertGuideStart"
+                app:layout_constraintTop_toBottomOf="@id/tvSpeed" />
+
+            <TextView
+                android:id="@+id/tvAbilitiesValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvAbilities"
+                app:layout_constraintStart_toEndOf="@+id/tvAbilities"
+                app:layout_constraintTop_toBottomOf="@id/tvHeightValue" />
+
+            <TextView
+                android:id="@+id/tvSpecialDefence"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/special_defence"
+                app:layout_constraintEnd_toStartOf="@+id/tvSpecialDefenceValue"
+                app:layout_constraintTop_toBottomOf="@id/llType" />
+
+            <TextView
+                android:id="@+id/tvSpecialDefenceValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvId"
+                app:layout_constraintEnd_toStartOf="@id/vertGuideEnd"
+                app:layout_constraintTop_toBottomOf="@id/tvIdValue" />
+
+            <TextView
+                android:id="@+id/tvSpecialAttack"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/special_attack"
+                app:layout_constraintEnd_toStartOf="@+id/tvSpecialAttackValue"
+                app:layout_constraintTop_toBottomOf="@id/tvSpecialDefence" />
+
+            <TextView
+                android:id="@+id/tvSpecialAttackValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvWeight"
+                app:layout_constraintEnd_toStartOf="@id/vertGuideEnd"
+                app:layout_constraintTop_toBottomOf="@id/tvSpecialDefenceValue" />
+
+            <TextView
+                android:id="@+id/tvDefence"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/defence"
+                app:layout_constraintEnd_toStartOf="@+id/tvDefenceValue"
+                app:layout_constraintTop_toBottomOf="@id/tvSpecialAttack" />
+
+            <TextView
+                android:id="@+id/tvDefenceValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvHeight"
+                app:layout_constraintEnd_toStartOf="@id/vertGuideEnd"
+                app:layout_constraintTop_toBottomOf="@id/tvSpecialAttackValue" />
+
+            <TextView
+                android:id="@+id/tvAttack"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/attack"
+                app:layout_constraintEnd_toStartOf="@+id/tvAttackValue"
+                app:layout_constraintTop_toBottomOf="@id/tvDefence" />
+
+            <TextView
+                android:id="@+id/tvAttackValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvSpeed"
+                app:layout_constraintEnd_toStartOf="@id/vertGuideEnd"
+                app:layout_constraintTop_toBottomOf="@id/tvDefenceValue" />
+
+            <TextView
+                android:id="@+id/tvHealth"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/hp"
+                app:layout_constraintEnd_toStartOf="@+id/tvHealthValue"
+                app:layout_constraintTop_toBottomOf="@id/tvAttack" />
+
+            <TextView
+                android:id="@+id/tvHealthValue"
+                style="@style/TextView.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/pokemon_stats_default_value"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvAbilities"
+                app:layout_constraintEnd_toStartOf="@id/vertGuideEnd"
+                app:layout_constraintTop_toBottomOf="@id/tvAttackValue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

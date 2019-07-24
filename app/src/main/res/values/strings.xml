@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Pokeapi</string>
+    <string name="updating">"Updating…"</string>
+    <string name="internet_error">Error loading data! \nPlease check your internet \nconnection.</string>
+    <string name="refresh">Refresh</string>
+    <string name="sort">Sort</string>
+
+    <string name="type">"Type: "</string>
+    <string name="id">"ID: "</string>
+    <string name="weight">"Weight: "</string>
+    <string name="height">"Height: "</string>
+    <string name="speed">"Speed: "</string>
+    <string name="abilities">"Abilities: "</string>
+    <string name="special_defence">"Special Defence: "</string>
+    <string name="special_attack">"Special Attack: "</string>
+    <string name="defence">"Defence: "</string>
+    <string name="attack">"Attack: "</string>
+    <string name="hp">"HP: "</string>
+    <string name="pokemon_stats_default_value">"?"</string>
+
+    <string name="toast_sort_a_z">Sorting by: Name (A-Z)</string>
+    <string name="toast_sort_z_a">Sorting by: Name (Z-A)</string>
+    <string name="toast_sort_no_data">No data to sort!</string>
+    <string name="toast_error_loading_data">Error loading data!</string>
+
+    <string name="name_a_z">Name (A-Z)</string>
+    <string name="name_z_a">Name (Z-A)</string>
+
+    <string name="imageURL">"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%1$d.png"</string>
+</resources>
